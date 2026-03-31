@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-surface-100 text-surface-900 font-sans;
+  }
+
+  ::selection {
+    @apply bg-brand-200 text-brand-900;
+  }
+}
+
+@layer components {
+  .tiptap {
+    @apply outline-none min-h-[500px] px-12 py-8 text-[15px] leading-[1.75] text-surface-800;
+  }
+
+  .tiptap > *:first-child {
+    margin-top: 0 !important;
+  }
+
+  .tiptap p {
+    @apply mb-4;
+  }
+
+  .tiptap h1 {
+    @apply text-[2rem] font-bold mb-4 mt-10 leading-tight text-surface-900 tracking-tight;
+  }
+
+  .tiptap h2 {
+    @apply text-[1.5rem] font-semibold mb-3 mt-8 leading-tight text-surface-900 tracking-tight;
+  }
+
+  .tiptap h3 {
+    @apply text-[1.2rem] font-semibold mb-2 mt-6 leading-snug text-surface-800;
+  }
+
+  .tiptap ul {
+    @apply list-disc pl-7 mb-4 space-y-1.5;
+  }
+
+  .tiptap ol {
+    @apply list-decimal pl-7 mb-4 space-y-1.5;
+  }
+
+  .tiptap li p {
+    @apply mb-1;
+  }
+
+  .tiptap strong {
+    @apply font-semibold text-surface-900;
+  }
+
+  .tiptap em {
+    @apply italic text-surface-700;
+  }
+
+  .tiptap u {
+    @apply underline decoration-brand-400 underline-offset-2;
+  }
+
+  .tiptap hr {
+    @apply my-8 border-surface-200;
+  }
+
+  .tiptap blockquote {
+    @apply border-l-4 border-brand-400 pl-5 italic text-surface-500 my-6 bg-brand-50/50 py-3 pr-4 rounded-r-lg;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:ring-offset-1 focus:ring-offset-white;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-surface-200 rounded-full;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-surface-300;
+  }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  .tiptap { padding: 0 !important; }
+}
