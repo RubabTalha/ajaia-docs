@@ -3,7 +3,7 @@ A lightweight collaborative document editor built with React, Tiptap, Express, a
 
 **Getting Started
 Prerequisites**
-Node.js 18+
+Node.js 18+ 
 npm
 Install & Run
 cd ajaia_docsnpm installnpm run dev
